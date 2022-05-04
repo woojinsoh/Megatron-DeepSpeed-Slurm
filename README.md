@@ -56,7 +56,7 @@ There might be no dependency errors if you try going through this step inside th
 **Slurm scheduler** is used to dispatch jobs to the GPU computing cluster. **Note that** the value of variable `CONTAINER_IMAGE` in the slurm scripts should be modified to the tag name of your own container where **DeepSpeed** is properly installed(see Prerequisite step 1-2). In addition, most of the configuration parameters in the scripts are hard-coded just for simplicity. You can modify them according to your preference(e.g., the size of TP/PP, hidden states, batchsize, DeepSpeed configs, etc).
 
 #### Megatron-DeepSpeed on a **single node**
-The default number of GPUs is set to be 8(i.e., 8 GPUs) in the script by the variable `N_GPUS`. you can modify the value of this variable if you need.
+The default number of GPUs is set to be 8(i.e., 8 GPUs) in the script by the variable `N_GPUS`. you can modify the value of this variable if you need. Execute the script with `sbatch` command.
 ```bash
 sbatch megatron_ds_snmg.slurm
 ```
